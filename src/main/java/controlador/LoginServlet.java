@@ -30,7 +30,11 @@ public class LoginServlet extends HttpServlet{
         if (autenticarUsuario(username, password)) {
             // Usuario autenticado con éxito
             HttpSession session = request.getSession();
-            session.setAttribute("usuario", username);
+           
+            
+//cambie username por el numero 1.
+                           //hay que cambiarlo!!!
+            session.setAttribute("usuario", 1);
             response.sendRedirect("gestionArticulos.jsp"); // Redirigir a la página de gestion
         } else {
             // Autenticación fallida
