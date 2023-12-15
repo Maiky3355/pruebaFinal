@@ -1,5 +1,4 @@
 
-
 <%@page import="dao.CarritoDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="modelo.Carrito"%>
@@ -8,53 +7,68 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Lista en carrito</title>
+        <title>Gestión de Oradores</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container mt-5">
-            <h2>Lista en carrito</h2>
+            <h2>Gestión de Oradores</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>usuario</th>
-                        <th>item</th>
+                        <th>ID</th>
+                        <th>articulo</th>
                         <th>cantidad</th>
-              
+                    
                     </tr>
                 </thead>
                 <tbody>
                     <%
-                        // Crear una instancia de OradoresDAO para acceder a la base de datos
-                        CarritoDAO carritoDAO = new CarritoDAO();
-
-                        // Obtener la lista de oradores desde la base de datos
+                       CarritoDAO carritoDAO = new CarritoDAO();
                         List<Carrito> carritos = carritoDAO.obtenerTodos();
 
                         if (carritos != null && !carritos.isEmpty()) {
-                            // Iterar sobre la lista de oradores y mostrar sus datos en la tabla
                             for (Carrito carrito : carritos) {
                     %>
                     <tr>
                         <td><%= carrito.getUser_id()%></td>
                         <td><%= carrito.getArticulo_id()%></td>
                         <td><%= carrito.getCantidad()%></td>
-                 
+                     
+                        <td>
+                            <div class="d-flex">
+                                <!-- Formulario para actualizar -->
+                                <form action="GestionCarritoServlet" method="post" class="mr-2">
+                                    <input type="hidden" name="accion" value="actualizar">
+                                    <input type="hidden" name="id" value="<%= carrito.getUser_id()%>">
+                                    <button type="submit" class="btn btn-warning btn-block">Actualizar</button>
+                                </form>
+
+                                <!-- Formulario para eliminar -->
+                                <form action="GestionCarritoServlet" method="post">
+                                    <input type="hidden" name="accion" value="eliminar">
+                                    <input type="hidden" name="id" value="<%= carrito.getUser_id()%>">
+                                    <button type="submit" class="btn btn-danger btn-block">Eliminar</button>
+                                </form>
+                            </div>
+                        </td>
                     </tr>
                     <%
                         }
                     } else {
                     %>
                     <tr>
-                        <td colspan="5">No hay articulos registrados.</td>
+                        <td colspan="6">No hay oradores registrados.</td>
                     </tr>
                     <%
                         }
                     %>
                 </tbody>
             </table>
-            <!-- Botón para volver al índice -->
             <a href="../" class="btn btn-success">Volver</a>   
         </div>
     </body>
 </html>
+
+
+
