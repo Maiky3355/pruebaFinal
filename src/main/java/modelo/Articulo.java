@@ -14,11 +14,11 @@ public class Articulo {
  private String categoria;
  private String marca;
  private String dolar;
-
+ private String img;
     public Articulo() {
     }
 
-    public Articulo(int articulo, String descripcion, String venta, int inventario, String categoria, String marca, String dolar) {
+    public Articulo(int articulo, String descripcion, String venta, int inventario, String categoria, String marca, String dolar, String img) {
         this.articulo = articulo;
         this.descripcion = descripcion;
         this.venta = venta;
@@ -26,6 +26,7 @@ public class Articulo {
         this.categoria = categoria;
         this.marca = marca;
         this.dolar = dolar;
+        this.img= img;
     }
 
     public int getArticulo() {
@@ -82,6 +83,14 @@ public class Articulo {
 
     public void setDolar(String dolar) {
         this.dolar = dolar;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
  
  

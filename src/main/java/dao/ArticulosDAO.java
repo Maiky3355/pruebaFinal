@@ -28,6 +28,7 @@ public class ArticulosDAO {
                 articulo.setCategoria(rs.getString("Categoria"));
                 articulo.setMarca(rs.getString("Marca"));
                 articulo.setDolar(rs.getString("DOLAR"));
+                articulo.setImg(rs.getString("F18"));
                 return articulo;
             }
         } catch (SQLException e) {
@@ -38,7 +39,7 @@ public class ArticulosDAO {
 
     public List<Articulo> obtenerTodos() {
         List<Articulo> articulos = new ArrayList<>();
-        String sql = "SELECT * FROM articulos";
+        String sql = "SELECT * FROM articulos order by Categoria, Descripción";
         try (Connection conn = ConexionDB.conectar();
              PreparedStatement pstmt = conn.prepareStatement(sql);
              ResultSet rs = pstmt.executeQuery()) {
@@ -52,6 +53,7 @@ public class ArticulosDAO {
                 articulo.setCategoria(rs.getString("Categoria"));
                 articulo.setMarca(rs.getString("Marca"));
                 articulo.setDolar(rs.getString("DOLAR"));
+                articulo.setImg(rs.getString("F18"));
                 articulos.add(articulo);
             }
         } catch (SQLException e) {

@@ -21,7 +21,7 @@ import util.ConexionDB;
 //La URL en la anotación debe reflejar cómo quieres acceder al servlet desde el navegador,
 //no su ubicación en la estructura de carpetas del proyecto
 @WebServlet("/vistas/LoginServlet")
-public class LoginServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet{
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
@@ -55,15 +55,21 @@ public class LoginServlet extends HttpServlet {
             pstmt.setString(2, password);
 
             rs = pstmt.executeQuery();
+         
             
-            
+                
             return rs.next(); // Si hay un resultado, las credenciales son correctas
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         } finally {
+        
             // Cerrar recursos
             try {
+                   
+            Usuario usuario = new Usuario();
+             usuario.setId(rs.getInt("id"));
+              
                 if (rs != null) rs.close();
                 if (pstmt != null) pstmt.close();
                 if (conn != null) conn.close();
