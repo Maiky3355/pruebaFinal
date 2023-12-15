@@ -179,7 +179,7 @@
                         <p class="card-text"><small class="text-body-secondary">$<%= articulo.getVenta()%></small></p>
                         <div class="d-flex">
                             <!-- Formulario para actualizar -->
-                            <form action="GestionArticuloServlet" method="post" class="mr-2">
+                            <form action="registroCarrito" method="post" class="mr-2">
                                 <input type="hidden" name="accion" value="agregar">
                                 <input type="hidden" name="id" value="<%= articulo.getArticulo()%>">
                                 <input type="hidden" name="usuario" value="<%= session.getAttribute("usuario")%>">
