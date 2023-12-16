@@ -1,4 +1,3 @@
-
 <%@page import="dao.CarritoDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="modelo.Carrito"%>
@@ -72,7 +71,7 @@
                     } else {
                     %>
                     <tr>
-                        <td colspan="6">No hay oradores registrados.</td>
+                        <td colspan="6">No hay articulos agregados.</td>
                     </tr>
                     <%
                         }
