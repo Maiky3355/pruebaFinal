@@ -18,13 +18,15 @@ public class RegistroCarrito extends HttpServlet {
             throws ServletException, IOException {
         // Obtener datos del formulario
         String id = request.getParameter("id");
+        String desc= request.getParameter("desc");
         String usuario = request.getParameter("usuario");
         String cantidad = request.getParameter("cantidad");
 
         // Crear un objeto Orador con los datos
         Carrito carrito = new Carrito();
-        carrito.setUser_id(Integer.parseInt(id));
-        carrito.setArticulo_id(Integer.parseInt(usuario));
+        carrito.setUser_id(Integer.parseInt(usuario));
+        carrito.setArticulo(desc);
+        carrito.setArticulo_id(Integer.parseInt(id));
         carrito.setCantidad(Integer.parseInt(cantidad));
 
         // Obtener la fecha actual
@@ -36,7 +38,7 @@ public class RegistroCarrito extends HttpServlet {
         carritoDAO.agregarCarrito(carrito);
 
         // Redireccionar a la página de visualización de oradores
-        response.sendRedirect(request.getContextPath() + "/vistas/verCarrito.jsp");
+        response.sendRedirect(request.getContextPath() + "/vistas/gestionCarrito.jsp");
  
     }
 }

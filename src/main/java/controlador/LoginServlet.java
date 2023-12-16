@@ -22,10 +22,35 @@ import util.ConexionDB;
 //no su ubicación en la estructura de carpetas del proyecto
 @WebServlet("/vistas/LoginServlet")
 public class LoginServlet extends HttpServlet{
-
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+
+    if(username!=null)   {         
+        String sql = "SELECT * FROM user WHERE usuario = ?";
+        try (Connection conn = ConexionDB.conectar();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                Usuario usuario = new Usuario();
+                usuario.setId(rs.getInt("id"));
+                      HttpSession session = request.getSession();
+           
+         session.setAttribute("usuario", usuario.getId());
+            }
+           } catch (SQLException e) {
+            e.printStackTrace();
+        } }
+    
+    
+    
+    
+    
+    
 
         if (autenticarUsuario(username, password)) {
             // Usuario autenticado con éxito
@@ -34,7 +59,6 @@ public class LoginServlet extends HttpServlet{
             
 //cambie username por el numero 1.
                            //hay que cambiarlo!!!
-            session.setAttribute("usuario", 1);
             response.sendRedirect("gestionArticulos.jsp"); // Redirigir a la página de gestion
         } else {
             // Autenticación fallida
@@ -71,8 +95,7 @@ public class LoginServlet extends HttpServlet{
             // Cerrar recursos
             try {
                    
-            Usuario usuario = new Usuario();
-             usuario.setId(rs.getInt("id"));
+  
               
                 if (rs != null) rs.close();
                 if (pstmt != null) pstmt.close();

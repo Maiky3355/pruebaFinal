@@ -10,14 +10,16 @@ package modelo;
  */
 public class Carrito {
     private int user_id;
+    private String articulo;
     private int articulo_id;
     private int cantidad;
 
     public Carrito() {
     }
 
-    public Carrito(int user_id, int articulo_id, int cantidad) {
+    public Carrito(int user_id, String articulo,int articulo_id, int cantidad) {
         this.user_id = user_id;
+        this.articulo= articulo;
         this.articulo_id = articulo_id;
         this.cantidad = cantidad;
     }
@@ -29,7 +31,13 @@ public class Carrito {
     public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
+   public String getArticulo() {
+        return articulo;
+    }
 
+    public void setArticulo(String articulo) {
+        this.articulo = articulo;
+    }
     public int getArticulo_id() {
         return articulo_id;
     }

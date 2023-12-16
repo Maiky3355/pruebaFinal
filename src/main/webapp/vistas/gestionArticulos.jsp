@@ -18,8 +18,6 @@
 </head>
 
 
-
-
 <img id="fondo" src="../img/logo.png">
 
 
@@ -184,6 +182,7 @@
                             <form action="registroCarrito" method="post" class="mr-2">
                                 <input type="hidden" name="accion" value="agregar">
                                 <input type="hidden" name="id" value="<%= articulo.getArticulo()%>">
+                                 <input type="hidden" name="desc" value="<%= articulo.getDescripcion()%>">
                                 <input type="hidden" name="usuario" value="<%= session.getAttribute("usuario")%>">
                                 <p>cantidad <input type="text" name="cantidad" value="1" style="width: 5vh">
                                 <button type="submit" class="btn btn-dark inter">Agregar
@@ -210,7 +209,7 @@
 
 
 
-    <a href="../" class="btn btn-success">Volver</a> 
+    <a href="gestionArticulos.jsp" class="btn btn-success">Volver</a> 
 
 
     <footer>

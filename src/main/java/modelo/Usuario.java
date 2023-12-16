@@ -3,8 +3,8 @@ package modelo;
 
 
 public class Usuario {
-  
-  private int id;
+
+ private int id;
  private String usuario;
  private String email;
  private int telefono;

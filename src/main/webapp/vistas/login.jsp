@@ -26,10 +26,15 @@
                                 </div>
                                 <br>
                                 <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
-                                <a href="../" class="btn btn-success">Volver</a>
+                                
+                              
+                       
+                                  <a href="registrar.jsp" class="btn btn-dark">¿No esta registrado?</a>
                             </form>
-                        </div>
+                              </div>
                     </div>
+                                     <a href="../" class="btn btn-success">Volver</a>
+                      
                 </div>
             </div>
         </div>

@@ -8,40 +8,34 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Gestión de carrito</title>
+        <title>Gestión de Oradores</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
+  
         <div class="container mt-5">
-            <h2>Gestión de carrito</h2>
+            <h2>Gestión de Oradores</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-               
+                        <th>Usuario</th>
+                        <th>Id Articulo</th>
                         <th>Articulo</th>
                         <th>Cantidad</th>
                     
                     </tr>
                 </thead>
                 <tbody>
-                  <%String usuario = String.valueOf(session.getAttribute("usuario"));
-                   
-                   if("null".equals(usuario)){
-                       response.sendRedirect("login.jsp"); 
-                       
-                   }                    
-                     %>
-                    
                     <%
-                       
                        CarritoDAO carritoDAO = new CarritoDAO();
-                        List<Carrito> carritos = carritoDAO.obtenerTodos(Integer.parseInt(usuario)); //este cambie!
+                        List<Carrito> carritos = carritoDAO.obtenerTodos();
 
                         if (carritos != null && !carritos.isEmpty()) {
                             for (Carrito carrito : carritos) {
                     %>
                     <tr>
-                      
+                        <td><%= carrito.getUser_id()%></td>
+                         <td><%= carrito.getArticulo_id()%></td>
                          <td><%= carrito.getArticulo()%></td>
                         <td><%= carrito.getCantidad()%></td>
                      

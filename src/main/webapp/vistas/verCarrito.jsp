@@ -12,14 +12,16 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body>
+        
         <div class="container mt-5">
             <h2>Lista en carrito</h2>
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>usuario</th>
-                        <th>item</th>
-                        <th>cantidad</th>
+                        <th>Usuario</th>
+                        <th>Id producto</th>
+                        <th>Descripcion</th>
+                        <th>Cantidad</th>
               
                     </tr>
                 </thead>
@@ -37,7 +39,9 @@
                     %>
                     <tr>
                         <td><%= carrito.getUser_id()%></td>
-                        <td><%= carrito.getArticulo_id()%></td>
+                          <td><%= carrito.getArticulo_id()%></td>
+                        <td><%= carrito.getArticulo()%></td>
+                      
                         <td><%= carrito.getCantidad()%></td>
                  
                     </tr>
@@ -54,7 +58,7 @@
                 </tbody>
             </table>
             <!-- Botón para volver al índice -->
-            <a href="../" class="btn btn-success">Volver</a>   
+            <a href="gestionArticulos.jsp" class="btn btn-success">Volver</a>   
         </div>
     </body>
 </html>
