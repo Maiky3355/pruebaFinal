@@ -78,7 +78,7 @@
                     %>
                 </tbody>
             </table>
-            <a href="gestionArticulos.jsp" class="btn btn-success">Volver</a>   
+         
         </div>
     </body>
 </html>

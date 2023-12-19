@@ -1,13 +1,9 @@
-controlador\GestionOradorServlet.class
 dao\CarritoDAO.class
-modelo\Orador.class
-dao\ArticulosDAO.class
-controlador\RegistroCarrito.class
-controlador\RegistroOrador.class
-dao\OradoresDAO.class
 util\ConexionDB.class
+dao\ArticulosDAO.class
 modelo\Carrito.class
 controlador\GestionArticuloServlet.class
+controlador\RegistroCarrito.class
 modelo\Usuario.class
 modelo\Articulo.class
 controlador\LoginServlet.class

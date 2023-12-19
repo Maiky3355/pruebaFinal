@@ -33,7 +33,7 @@
                 </svg>
             </button>
             <!-- total nav de carrito -->
-            <div id="totalCarritoNavb" class="text-bg-dark">$ 0.00</div>
+          <!--  <div id="totalCarritoNavb" class="text-bg-dark">$ 0.00</div>-->
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -45,13 +45,13 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
+                            <a class="nav-link " aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="tienda.html">Tienda</a>
                         </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="../contacto.html">Contacto</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -64,7 +64,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item active" href="mobiliarios.html">Mobiliarios</a></li>
+                                <li><a class="dropdown-item active" href="../mobiliarios.html">Mobiliarios</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -83,9 +83,7 @@
                         <h1>Sublime Supplies</h1>
                     </b>
                     <h4>Insumos para tatuadores</h4>
-                    <br>
-                    <h2>Mobiliarios</h2>
-                    <!-- etiquetas del alert -->
+                  <!-- etiquetas del alert -->
                     <div id="alertAgrego" class="alert alert-success fade hide" role="alert">
                         <strong id="alertTit"></strong>
                         <div id="alertSuceso"></div>
@@ -103,49 +101,25 @@
             </div>
             <div class="offcanvas-body">
                 <div class="container">
-                    <P id="precioTotal" style="text-align: start;">PRECIO TOTAL: $</P>
-                    <div class="row">
-                        <div class="col-3">
-                            <div class="card">
-                                <p>Cant.</p>
-                                <div id="aca3">
-                                    <p id="interes3"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="card">
-                                <p>PRODUCTOS</p>
-                                <div id="aca">
-                                    <p id="interes" style="cursor: pointer">
-
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-3">
-                            <div class="card">
-                                <p>PRECIOS</p>
-                                <div id="aca2">
-                                    <p id="interes2"></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+   
+                   
                     <div class="row">
                         <div class="col-12">
-                            <p>Precione en el item para eliminarlo</p>
-                            <br><br><br>
-                            <p>PROXIMAMENTE API MERCADOPAGO Y DATABASE</p>
+                                   <div class="card">
+                              <iframe
+                                src="gestionCarrito.jsp"
+                                 height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     
+                          
+                                </div>
+                            </div>
+                        </div>
+                     
+                        
+                    </div>                          
                         </div>
                     </div>
-                </div>
-
-            </div>
-        </div>
-
 </main>
 
 
@@ -190,7 +164,7 @@
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                                     </svg>
                                 </button></p>
-                                     <input type="submit" id="btnEnviar" value="Enviar">
+                                 
                             </form>
                         </div>
                     </div>
@@ -209,7 +183,7 @@
 
 
 
-    <a href="gestionArticulos.jsp" class="btn btn-success">Volver</a> 
+    <a href="../index.html" class="btn btn-success">Volver</a> 
 
 
     <footer>
