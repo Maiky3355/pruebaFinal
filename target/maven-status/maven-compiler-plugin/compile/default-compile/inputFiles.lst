@@ -1,4 +1,5 @@
 C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\dao\CarritoDAO.java
+C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\modelo\Usuario2.java
 C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\util\ConexionDB.java
 C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\dao\ArticulosDAO.java
 C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\controlador\GestionArticuloServlet.java
@@ -7,3 +8,5 @@ C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SN
 C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\controlador\RegistroCarrito.java
 C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\modelo\Usuario.java
 C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\modelo\Carrito.java
+C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\dao\UsuarioDAO.java
+C:\Users\BGGRIS\Documents\NetBeansProjects\com.mycompany_prueba_23558_war_1.0-SNAPSHOT\src\main\java\controlador\RegistroUsuario.java

@@ -12,7 +12,7 @@
  
         <div class="container mt-5">
             <h2>Crear usuario</h2>
-            <form action="GestionUsuarioServlet" method="post">
+            <form action="RegistroUsuario" method="post">
             
                 <div class="form-group ">
                     <label>Nombre</label>

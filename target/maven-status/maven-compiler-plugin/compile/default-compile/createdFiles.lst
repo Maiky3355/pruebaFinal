@@ -1,9 +1,12 @@
 dao\CarritoDAO.class
-util\ConexionDB.class
 dao\ArticulosDAO.class
+controlador\RegistroUsuario.class
+modelo\Usuario2.class
+controlador\RegistroCarrito.class
+util\ConexionDB.class
+dao\UsuarioDAO.class
 modelo\Carrito.class
 controlador\GestionArticuloServlet.class
-controlador\RegistroCarrito.class
 modelo\Usuario.class
 modelo\Articulo.class
 controlador\LoginServlet.class
