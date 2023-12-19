@@ -1,9 +1,8 @@
    
 package controlador;
 
-import dao.CarritoDAO;
+
 import dao.UsuarioDAO;
-import modelo.Carrito;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,22 +13,22 @@ import java.io.IOException;
 import modelo.Usuario2;
 //import java.sql.Date;
 
-@WebServlet("/vistas/registroCarrito")
+@WebServlet("/vistas/registroUsuario")
 public class RegistroUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Obtener datos del formulario
-        String usuario = request.getParameter("usuario");
-        String contraseña= request.getParameter("contraseña");
-        String email = request.getParameter("email");
-        String telefono = request.getParameter("telefono");
+        String usu = request.getParameter("usuario");
+        String cont= request.getParameter("contraseña");
+        String em = request.getParameter("email");
+        String tel = request.getParameter("telefono");
 
         // Crear un objeto Orador con los datos
         Usuario2 usuario2 = new Usuario2();
-        usuario2.setUsuario(usuario);
-        usuario2.setContraseña(contraseña);
-        usuario2.setEmail(email);
-        usuario2.setTelefono(Integer.parseInt(telefono));
+        usuario2.setUsuario(usu);
+        usuario2.setContraseña(cont);
+        usuario2.setEmail(em);
+        usuario2.setTelefono(Integer.parseInt(tel));
 
         // Obtener la fecha actual
         //java.util.Date fechaActual = new java.util.Date(); //es una forma de utilizar la clase sin necesitar una declaracion 'import'
@@ -40,7 +39,7 @@ public class RegistroUsuario extends HttpServlet {
         usuarioDAO.agregarCarrito(usuario2);
 
         // Redireccionar a la página de visualización de oradores
-        response.sendRedirect(request.getContextPath() + "/vistas/gestionCarrito.jsp");
+        response.sendRedirect(request.getContextPath() + "/vistas/login.jsp");
  
     }
 }

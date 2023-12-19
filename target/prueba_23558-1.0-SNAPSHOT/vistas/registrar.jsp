@@ -1,5 +1,5 @@
 
-<%@page import="modelo.Carrito"%>
+<%@page import="modelo.Usuario2"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,19 +12,19 @@
  
         <div class="container mt-5">
             <h2>Crear usuario</h2>
-            <form action="RegistroUsuario" method="post">
+            <form action="registroUsuario" method="post">
             
                 <div class="form-group ">
                     <label>Nombre</label>
-                    <input type="text" class="form-control" name="usuario" value="">
+                    <input type="text" class="form-control" id="usuario" name="usuario" value="">
                       <label>Contraseña</label>
-                    <input type="text" class="form-control" name="contraseña" value="">
+                    <input type="password" class="form-control" id="contraseña" name="contraseña" value="">
                     
     
                         <label>Email</label>
-                    <input type="text" class="form-control" name="email" value="">
+                    <input type="text" class="form-control" id="email" name="email" value="">
                 </div>    <label>Telefono</label>
-                    <input type="text" class="form-control" name="telefono" value="">
+                    <input type="text" class="form-control" id="telefono" name="telefono" value="">
                 </div>
                 </div>
 

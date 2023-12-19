@@ -17,7 +17,7 @@ public class UsuarioDAO {
         //asegura que los recursos abiertos en su declaración (dentro de los paréntesis) se cierren automáticamente al final del bloque try 
         try (Connection conn = ConexionDB.conectar();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
+ 
             pstmt.setString(1, Usuario2.getUsuario());
             pstmt.setString(2, Usuario2.getContraseña());
             pstmt.setString(3, Usuario2.getEmail());
@@ -27,32 +27,4 @@ public class UsuarioDAO {
             e.printStackTrace();
         }
     }
-
-    public Carrito obtenerPorId(int id, int idArticulo) {
-        String sql = "SELECT * FROM carrito WHERE user_id = ? && articulo_id = ?";
-        try (Connection conn = ConexionDB.conectar();
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
-
-            pstmt.setInt(1, id);
-               pstmt.setInt(2, idArticulo);
-            ResultSet rs = pstmt.executeQuery();
-
-            if (rs.next()) {
-                Carrito carrito = new Carrito();
-                carrito.setUser_id(rs.getInt("user_id"));
-                carrito.setArticulo(rs.getString("articulo"));
-                carrito.setArticulo_id(rs.getInt("articulo_id"));
-                carrito.setCantidad(rs.getInt("cantidad"));
-        
-                return carrito;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    
-
-}
-          
+}      
