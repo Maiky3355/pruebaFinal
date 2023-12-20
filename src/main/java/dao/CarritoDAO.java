@@ -11,7 +11,7 @@ import util.ConexionDB;
 
 public class CarritoDAO {
     public void agregarCarrito(Carrito carrito) {
-        String sql = "INSERT INTO carrito (user_id, articulo, articulo_id, cantidad) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO carrito (user_id, articulo, articulo_id, cantidad, venta) VALUES (?, ?, ?, ?, ?)";
         //bloque try-with-resources
         //asegura que los recursos abiertos en su declaración (dentro de los paréntesis) se cierren automáticamente al final del bloque try 
         try (Connection conn = ConexionDB.conectar();
@@ -21,6 +21,7 @@ public class CarritoDAO {
             pstmt.setString(2, carrito.getArticulo());
             pstmt.setInt(3, carrito.getArticulo_id());
             pstmt.setInt(4, carrito.getCantidad());
+            pstmt.setString(5, carrito.getVenta());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -42,7 +43,7 @@ public class CarritoDAO {
                 carrito.setArticulo(rs.getString("articulo"));
                 carrito.setArticulo_id(rs.getInt("articulo_id"));
                 carrito.setCantidad(rs.getInt("cantidad"));
-        
+                carrito.setVenta(rs.getString("venta"));
                 return carrito;
             }
         } catch (SQLException e) {
@@ -73,7 +74,7 @@ public class CarritoDAO {
                 carrito.setArticulo(rs.getString("articulo"));
                 carrito.setArticulo_id(rs.getInt("articulo_id"));
                 carrito.setCantidad(rs.getInt("cantidad"));
-               
+                  carrito.setVenta(rs.getString("venta"));
                 carritos.add(carrito);
             }
              }} catch (SQLException e) {

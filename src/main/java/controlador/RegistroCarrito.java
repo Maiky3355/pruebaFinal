@@ -21,6 +21,7 @@ public class RegistroCarrito extends HttpServlet {
         String desc= request.getParameter("desc");
         String usuario = request.getParameter("usuario");
         String cantidad = request.getParameter("cantidad");
+        String venta = request.getParameter("venta");
 
         // Crear un objeto Orador con los datos
         Carrito carrito = new Carrito();
@@ -28,6 +29,7 @@ public class RegistroCarrito extends HttpServlet {
         carrito.setArticulo(desc);
         carrito.setArticulo_id(Integer.parseInt(id));
         carrito.setCantidad(Integer.parseInt(cantidad));
+        carrito.setVenta(venta);
 
         // Obtener la fecha actual
         //java.util.Date fechaActual = new java.util.Date(); //es una forma de utilizar la clase sin necesitar una declaracion 'import'
@@ -38,7 +40,7 @@ public class RegistroCarrito extends HttpServlet {
         carritoDAO.agregarCarrito(carrito);
 
         // Redireccionar a la página de visualización de oradores
-        response.sendRedirect(request.getContextPath() + "/vistas/gestionCarrito.jsp");
+        response.sendRedirect(request.getContextPath() + "/vistas/gestionArticulos.jsp");
  
     }
 }

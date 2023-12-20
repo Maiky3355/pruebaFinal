@@ -13,17 +13,20 @@ public class Carrito {
     private String articulo;
     private int articulo_id;
     private int cantidad;
-
+     private String venta;
     public Carrito() {
     }
 
-    public Carrito(int user_id, String articulo,int articulo_id, int cantidad) {
+    public Carrito(int user_id, String articulo,int articulo_id, int cantidad, String venta) {
         this.user_id = user_id;
         this.articulo= articulo;
         this.articulo_id = articulo_id;
         this.cantidad = cantidad;
+    this.venta= venta;
     }
 
+ 
+    
     public int getUser_id() {
         return user_id;
     }
@@ -53,5 +56,11 @@ public class Carrito {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
- 
+    public String getVenta() {
+        return venta;
+    }
+
+    public void setVenta(String venta) {
+        this.venta = venta;
+    }
 }

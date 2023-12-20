@@ -11,9 +11,8 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     </head>
     <body>
-        <div class="container fluid container-md">
-            <div class="row">
-               <div class="col-12">
+     
+           
             <h2>Gestión de carrito</h2>
             <table class="table table-bordered">
                 <thead>
@@ -21,7 +20,7 @@
                
                         <th>Articulo</th>
                         <th>Cant</th>
-                    
+                    <th>Valor unitario</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,6 +32,7 @@
                        
                    }                    
                      %>
+                    
                     
                     <%
                        
@@ -46,7 +46,7 @@
                       
                          <td><%= carrito.getArticulo()%></td>
                         <td><%= carrito.getCantidad()%></td>
-                  
+                   <td><%= carrito.getVenta()%></td>
                         <td>
                             <div class="d-flex">
                                 <!-- Formulario para actualizar -->
@@ -83,7 +83,7 @@
                 </tbody>
             </table>
          
-        </div>  </div>  </div>
+        </div>  
     </body>
 </html>
 
