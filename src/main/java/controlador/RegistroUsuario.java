@@ -13,20 +13,20 @@ import java.io.IOException;
 import modelo.Usuario2;
 //import java.sql.Date;
 
-@WebServlet("/vistas/registroUsuario")
+@WebServlet("/vistas/RegistroUsuario")
 public class RegistroUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Obtener datos del formulario
         String usu = request.getParameter("usuario");
-        String cont= request.getParameter("contraseña");
+        String contra= request.getParameter("contra");
         String em = request.getParameter("email");
         String tel = request.getParameter("telefono");
 
         // Crear un objeto Orador con los datos
         Usuario2 usuario2 = new Usuario2();
         usuario2.setUsuario(usu);
-        usuario2.setContraseña(cont);
+        usuario2.setContraseña(contra);
         usuario2.setEmail(em);
         usuario2.setTelefono(Integer.parseInt(tel));
 
@@ -36,7 +36,7 @@ public class RegistroUsuario extends HttpServlet {
 
         // Agregar el orador a la base de datos
         UsuarioDAO usuarioDAO = new UsuarioDAO();
-        usuarioDAO.agregarCarrito(usuario2);
+        usuarioDAO.agregarUsuario(usuario2);
 
         // Redireccionar a la página de visualización de oradores
         response.sendRedirect(request.getContextPath() + "/vistas/login.jsp");

@@ -12,19 +12,17 @@
  
         <div class="container mt-5">
             <h2>Crear usuario</h2>
-            <form action="registroUsuario" method="post">
+            <form action="RegistroUsuario" method="post">
             
                 <div class="form-group ">
                     <label>Nombre</label>
-                    <input type="text" class="form-control" id="usuario" name="usuario" value="">
-                      <label>Contraseña</label>
-                    <input type="password" class="form-control" id="contraseña" name="contraseña" value="">
-                    
-    
-                        <label>Email</label>
-                    <input type="text" class="form-control" id="email" name="email" value="">
+                    <input type="text" class="form-control" name="usuario" value=""required>
+                      <label>Password</label>
+                      <input type="text" class="form-control" name="contra" value=""required>
+                     <label>Email</label>
+                    <input type="text" class="form-control" name="email" value=""required>
                 </div>    <label>Telefono</label>
-                    <input type="text" class="form-control" id="telefono" name="telefono" value="">
+                    <input type="text" class="form-control" name="telefono" value=""required>
                 </div>
                 </div>
 

@@ -1,10 +1,15 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package modelo;
 
-
+/**
+ *
+ * @author BGGRIS
+ */
 public class Usuario2 {
-
- private String usuario;
+    private String usuario;
  private String contraseña;
  private String email;
  private int telefono;
@@ -50,6 +55,5 @@ public class Usuario2 {
     public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
- 
  
 }
